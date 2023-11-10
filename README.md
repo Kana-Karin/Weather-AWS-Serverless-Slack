@@ -8,3 +8,9 @@
 
 ## Lambda関数実行後、Slackチャンネルへ投稿
 <img width="657" alt="スクリーンショット 2023-11-10 19 33 00" src="https://github.com/Kana-Karin/Weather-AWS-Serverless-Slack/assets/84316229/38ff2010-4147-47f9-a2cf-01832854347a">
+
+
+### つまづいた部分
+- EventBridgeからLambda関数をトリガーする際、Lambda関数の実行ロール、EventBridgeにassumeが上手く付与出来ていなかった
+- EventBridgeにてcronを設定する際、最初に`30 8 * * * *`(毎朝8:30分)でパターンを構築したが、「CRON 式が無効です」が表示された<br>
+対処方法としてはAWS公式リファレンスを参照し`cron 式の日フィールドと曜日フィールドを同時に指定することはできません。一方のフィールドに値 (または *) を指定する場合、もう一方のフィールドで ? (疑問符) を使用する必要があります。`とのことでした
