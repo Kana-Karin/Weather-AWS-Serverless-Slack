@@ -15,5 +15,5 @@
 対処方法としてはAWS公式リファレンスを参照し`cron 式の日フィールドと曜日フィールドを同時に指定することはできません。一方のフィールドに値 (または *) を指定する場合、もう一方のフィールドで ? (疑問符) を使用する必要があります。`とのことでした
 
 ### 参考にさせていただいたサイト
-[Developers.IO](https://dev.classmethod.jp/articles/tsnote-eventbridge-cron-expression-is-invalid-in-eventbridge-schedule-pattern/)
-[Qiita](https://qiita.com/miriwo/items/0331b7277a819c05ed4b)
+[Developers.IO - 「CRON 式が無効です」が発生したときの対処方法](https://dev.classmethod.jp/articles/tsnote-eventbridge-cron-expression-is-invalid-in-eventbridge-schedule-pattern/)  
+[Qiita - AWS lambdaに付与するロール](https://qiita.com/miriwo/items/0331b7277a819c05ed4b)
