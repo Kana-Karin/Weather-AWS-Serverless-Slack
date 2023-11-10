@@ -6,12 +6,9 @@ import json
  
 http = urllib3.PoolManager()
 
+# Lambda環境変数を使用
 slack_endpoint = os.environ['slack_endpoint']
 weather_endpoint = os.environ['weather_endpoint']
- 
-# slack_endpoint = "https://hooks.slack.com/services/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"
-# weather_endpoint = "https://www.jma.go.jp/bosai/forecast/data/overview_forecast/016000.json"
- 
  
 def lambda_handler(event, context):
     # get weather result
@@ -28,7 +25,7 @@ def lambda_handler(event, context):
 def forward_slack_message(message_content):
     msg = {
         "channel": "#weatherchannel",
-        "username": "nancy",
+        "username": "",
         "text": message_content,
         "icon_emoji": ""
     }
